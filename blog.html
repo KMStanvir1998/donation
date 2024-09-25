@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important FAQ</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--navbar section-->
+    <header class="sticky">
+        <div class="container mx-auto">
+            <nav class="mt-5">
+                <ul class="flex justify-around items-center text-center">
+                    <li><button class="bg-lime-500 text-black px-5 py-3 rounded-xl font-bold">Blog</button></li>
+                    <li>
+                        <div class="flex justify-around items-center text-center">
+                            <img class="mr-5" src="images/logo.png" alt="logo">
+                            <h1 class="mt-5 text-3xl font-bold">Donate Bangladesh</h1>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="flex justify-around items-center text-center">
+                            <img class="mr-2" src="images/coin.png" alt="logo">
+                            <h1><span id="my-amount">5500</span>BDT</h1>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--navbar section-->
+    <section class="faq-section">
+        <div class="container mx-auto mt-5">
+            <div class="collapse collapse-arrow bg-base-200 mt-5">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                  <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a webpage as a tree of objects, allowing scripts to access, modify, and manipulate the HTML or XML content dynamically.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200 mt-5">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                  <p>1.getElementById() selects by ID</p>
+                  <p>2.getElementsByClassName() selects by class name.</p>
+                  <p>3.getElementsByTagName() selects by tag name.</p>
+                  <p>4.querySelector() selects the first element matching a CSS selector.</p>
+                  <p>5.querySelectorAll() selects all elements matching a CSS selector.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200 mt-5">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-content">
+                  <p>Event delegation is a technique in the DOM where a single event listener is attached to a parent element to manage events on its child elements. Instead of adding event listeners to multiple child elements, the parent listens for events, leveraging event bubbling. It's useful because it improves performance (fewer listeners) and simplifies code, especially when dynamically adding or removing child elements.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200 mt-5">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attribute and styles using the DOM?</div>
+                <div class="collapse-content">
+                    <p>To manipulate an element's attributes and styles in the DOM: 1. Attributes & 2. Styles</p>
+                    <p>Attributes: element.setAttribute('attribute', 'value') Sets or updates an attribute. element.getAttribute('attribute') Retrieves the attribute value.element.removeAttribute('attribute') Removes an attribute.</p> <br>
+                    <p>Styles: element.style.property = 'value' Directly changes the inline CSS style (e.g., element.style.color = 'red'). Alternatively, use element.classList.add(), remove(), or toggle() to manage classes for styling.</p>
+                </div>
+              </div>
+        </div>
+    </section>
+    <section id="h-section" class="history-section hidden">
+        <div class="container mx-auto mt-5">
+         <h2 class="text-3xl text-center">Transaction History</h2>
+         <div id="history-container"></div>
+        </div>
+     </section>
+ 
+     <script type="text/javascript">
+       window.addEventListener("scroll",function(){
+         var header = document.querySelector("header");
+         header.classList.toggle("sticky", window.scrollY > 0);
+       })
+     </script>
+     
+     <script src="js/donate.js"></script>
+     <script src="js/tag.js"></script>
+</body>
+</html>

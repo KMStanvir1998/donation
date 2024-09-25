@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Today</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--navbar section-->
+    <header class="sticky">
+        <div class="container mx-auto">
+            <nav class="mt-5">
+                <ul class="flex justify-around items-center text-center">
+                    <li><button id="btn-blog" class="bg-lime-500 text-black px-5 py-3 rounded-xl font-bold">Blog</button></li>
+                    <li>
+                        <div class="flex justify-around items-center text-center">
+                            <img class="mr-5" src="images/logo.png" alt="logo">
+                            <h1 class="mt-5 text-3xl font-bold">Donate Bangladesh</h1>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="flex justify-around items-center text-center">
+                            <img class="mr-2" src="images/coin.png" alt="logo">
+                            <h1><span id="my-amount">5500</span>BDT</h1>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!--navbar section-->
+
+    <section class="tag-section">
+        <div class="tag-button flex justify-center">
+            <button id="donationButton" class="btn-donation">Donation</button>
+            <button id="historyButton" class="btn-history">History</button>
+        </div>
+    </section>
+
+    <section id="d-section" class="donate-section">
+        <!--donate-->
+       <div class="flex justify-center donate-part-one">
+         <div class="donate-image"><img class="donate-photo" src="images/photo01.png" alt=""></div>
+         <div class="donate-details">
+            <button class="flex ml-5 mb-5 d-amount"><img src="images/coin.png" alt=""><p><span id="donate-collection">100</span>BDT</p></button>
+            <h1 id="donateTitleOne" class="mb-5 ml-5 donate-title">Donate for Flood at Noakhali, Bangladesh</h1>
+            <p class="ml-5 donate-text"> The recent floods in Noakhali have caused significant damage to <br> homes  infrastructure. Your donation will help provide essential <br> supplies and  to those affected by this disaster. Every contribution, <br> big or small, makes  difference. Please join us in supporting the relief <br> efforts and making a positive impact on the lives of those in need.</p>
+            <label class="input input-bordered flex items-center gap-2 ml-5">
+                <input id="donate-amount" type="text" class="grow" placeholder="Write your amount"/>
+            </label>
+            <button id="donate-button" class="btn-donate ml-5">Donate Now</button>
+         </div>
+       </div>
+    <!--donate-->
+
+    <!--donate-->
+       <div class="flex justify-center donate-part-two">
+        <div class="donate-image"><img class="donate-photo" src="images/photo02.png" alt=""></div>
+        <div class="donate-details">
+           <button class="flex ml-5 mb-5 d-amount"><img src="images/coin.png" alt=""><p><span id="donate-collection2">600</span>BDT</p></button>
+           <h1 id="donateTitleTwo" class="mb-5 ml-5 donate-title">Donate for Flood Relief in Feni,Bangladesh</h1>
+           <p class="ml-5 donate-text"> The recent floods in Noakhali have caused significant damage to <br> homes  infrastructure. Your donation will help provide essential <br> supplies and  to those affected by this disaster. Every contribution, <br> big or small, makes  difference. Please join us in supporting the relief <br> efforts and making a positive impact on the lives of those in need.</p>
+           <label class="input input-bordered flex items-center gap-2 ml-5">
+               <input id="donate-amount2" type="text" class="grow" placeholder="Write your amount"/>
+           </label>
+           <button id="donate-button2" class="btn-donate ml-5">Donate Now</button>
+        </div>
+      </div>
+      <!--donate-->
+
+      <!--donate-->
+      <div class="flex justify-center donate-part-three">
+        <div class="donate-image"><img class="donate-photo" src="images/photo03.png" alt=""></div>
+        <div class="donate-details">
+           <button class="flex ml-5 mb-5 d-amount"><img src="images/coin.png" alt=""><p><span id="donate-collection3">2400</span>BDT</p></button>
+           <h1 id="donateTitleThree" class="mb-5 ml-5 donate-title">Aid for Injured in the Quota Movementh</h1>
+           <p class="ml-5 donate-text"> The recent floods in Noakhali have caused significant damage to <br> homes  infrastructure. Your donation will help provide essential <br> supplies and  to those affected by this disaster. Every contribution, <br> big or small, makes  difference. Please join us in supporting the relief <br> efforts and making a positive impact on the lives of those in need.</p>
+           <label class="input input-bordered flex items-center gap-2 ml-5">
+               <input id="donate-amount3" type="text" class="grow" placeholder="Write your amount"/>
+           </label>
+           <button id="donate-button3" class="btn-donate ml-5">Donate Now</button>
+        </div>
+      </div>
+      <!--donate-->
+    </section>
+
+    <section id="h-section" class="history-section hidden">
+       <div class="container mx-auto mt-5">
+        <h2 class="text-3xl text-center">Transaction History</h2>
+        <div id="history-container"></div>
+       </div>
+    </section>
+
+    <script type="text/javascript">
+      window.addEventListener("scroll",function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      })
+    </script>
+    
+    <script src="js/donate.js"></script>
+    <script src="js/tag.js"></script>
+</body>
+</html>
