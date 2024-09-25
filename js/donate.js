@@ -1,4 +1,4 @@
-document.getElementById('donate-button').addEventListener('click',function(event){
+document.getElementById('donate-button1').addEventListener('click',function(event){
     event.preventDefault();
     const addDonateAmountString = document.getElementById('donate-amount').value;
     const addDonateAmount = parseFloat(addDonateAmountString);
